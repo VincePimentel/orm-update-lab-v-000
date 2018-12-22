@@ -2,7 +2,7 @@ require_relative "../config/environment.rb"
 require 'pry'
 
 class Student
-  attr_reader :id, :name, :grade
+  attr_accessor :id, :name, :grade
 
   def initialize(name, grade, id = nil)
     @id = id
