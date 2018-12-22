@@ -1,4 +1,5 @@
 require_relative "../config/environment.rb"
+require 'pry'
 
 class Student
   attr_reader :name, :grade, :id
@@ -38,12 +39,12 @@ class Student
     @id = DB[:conn].execute("SELECT last_insert_rowid()")[0][0]
   end
 
-  def self.create(name, grade)
+  def self.create(name:, grade:)
     student = self.new(name, grade)
     student.save
   end
 
   def self.new_from_db(row)
-
+    binding.pry
   end
 end
