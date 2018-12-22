@@ -1,7 +1,7 @@
 require_relative "../config/environment.rb"
 
 class Student
-  def initialize(id = nil, name, grade)
+  def initialize(name, grade, id = nil )
     @id = id
     @name = name
     @grade = grade
