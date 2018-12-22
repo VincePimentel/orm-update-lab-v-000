@@ -42,4 +42,8 @@ class Student
     student = self.new(name, grade)
     student.save
   end
+
+  def self.new_from_db(row)
+
+  end
 end
